@@ -155,11 +155,18 @@ section + section { border-top: 1px solid var(--border); }
 }
 .card p { margin: 0; color: var(--muted); font-size: .95rem; }
 
-/* The four research themes sit on one row on desktop, collapsing
+/* Four-across rows (research themes, collaborators) that collapse
    to 2-up then 1-up on narrower screens. */
-.grid.themes { grid-template-columns: repeat(4, 1fr); }
-@media (max-width: 900px) { .grid.themes { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .grid.themes { grid-template-columns: 1fr; } }
+.grid.themes,
+.grid.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) {
+  .grid.themes,
+  .grid.four { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .grid.themes,
+  .grid.four { grid-template-columns: 1fr; }
+}
 
 a.card {
   color: inherit;
