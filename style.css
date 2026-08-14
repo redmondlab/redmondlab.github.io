@@ -53,6 +53,9 @@ h1, h2, h3 { line-height: 1.25; font-weight: 650; letter-spacing: -0.015em; }
 h1 { font-size: 2.3rem; margin: 0 0 .5rem; }
 h2 { font-size: 1.45rem; margin: 2.75rem 0 .9rem; }
 h3 { font-size: 1.08rem; margin: 0 0 .4rem; }
+.prose h3 { margin-top: 2rem; }
+.prose ul { padding-left: 1.15rem; }
+.prose ul li { margin-bottom: .5rem; }
 
 /* ---------- header ---------- */
 
