@@ -146,16 +146,44 @@ section + section { border-top: 1px solid var(--border); }
   border-radius: 10px;
   padding: 24px;
 }
-.card .num {
-  font-variant-numeric: tabular-nums;
-  font-size: .74rem;
-  font-weight: 650;
-  letter-spacing: .08em;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 10px;
-}
 .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+/* The four research themes sit on one row on desktop, collapsing
+   to 2-up then 1-up on narrower screens. */
+.grid.themes { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .grid.themes { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid.themes { grid-template-columns: 1fr; } }
+
+a.card {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+a.card:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .07);
+}
+a.card h3 { transition: color .15s ease; }
+a.card:hover h3 { color: var(--accent); }
+a.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+a.card .more {
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.card, a.card h3 { transition: none; }
+  a.card:hover { transform: none; }
+}
 
 /* ---------- theme blocks (research page) ---------- */
 
@@ -163,8 +191,17 @@ section + section { border-top: 1px solid var(--border); }
   display: grid;
   grid-template-columns: 190px 1fr;
   gap: 32px;
-  padding: 34px 0;
+  padding: 40px 0;
   border-top: 1px solid var(--border);
+  scroll-margin-top: 88px; /* clears the sticky header when jumped to via #anchor */
+}
+.theme .papers-label {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .72rem;
+  font-weight: 650;
+  color: var(--muted);
+  margin: 1.8rem 0 .2rem;
 }
 .theme:first-of-type { border-top: none; }
 .theme > h2 { margin: 0; font-size: 1.18rem; }
