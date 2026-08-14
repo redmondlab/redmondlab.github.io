@@ -120,6 +120,12 @@ nav.site a[aria-current="page"] {
   color: var(--muted);
   margin: .35rem 0 0;
 }
+.hero p.detail {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 66ch;
+  margin: 1.3rem 0 0;
+}
 
 /* ---------- sections & cards ---------- */
 
