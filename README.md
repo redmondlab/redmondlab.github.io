@@ -38,13 +38,9 @@ If you rename one, update the matching `href` in `index.html`.
 Search the HTML for `TODO` and `NOTE` — each marks something deliberately left blank
 or flagged rather than guessed:
 
-- `people.html` — Ryan Nachman is listed as "Computational Engineer"; the Rafii Lab
-  team page lists "Data Control Assistant". Confirm which you want public.
-- `people.html` — Jenny Huang's current employer: LinkedIn says Columbia, Jenny's own
-  site still says Weill Cornell. Worth confirming directly.
-- `people.html` — check each collaborator is happy to be listed, and that the
-  description of the joint work matches how they would describe it.
 - `people.html` — optional PI bio paragraph
+- `people.html` — optional dates in the lab for past members, and a one-line
+  description of what Ryan works on
 - `contact.html` — building/room in the address block
 - `contact.html` / `software.html` — GEO accessions for published data
 
