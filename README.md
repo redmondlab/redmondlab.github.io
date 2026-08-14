@@ -20,28 +20,41 @@ If you change a nav link, change it in all five pages.
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home — intro and the four research themes |
-| `research.html` | Themes in depth |
+| `index.html` | Home — intro and the four research themes (cards link into `research.html`) |
+| `research.html` | Themes in depth, each with its own papers, plus the Approach section |
+| `software.html` | Public GitHub repos: MDS-MAPS, pancreatic EC atlas, scTCRseq |
 | `publications.html` | Selected + full publication list by year |
 | `people.html` | PI, current/past members, collaborators, recruiting |
 | `contact.html` | Contact details, data/code pointers |
 | `style.css` | All styling; light and dark via `prefers-color-scheme` |
 | `CNAME` | Custom domain for GitHub Pages — must contain `redmondlab.org` |
 
+Theme anchors used by the home page cards: `#computational-biology`,
+`#transcriptomics-epigenomics`, `#machine-learning`, `#vascular-immune`.
+If you rename one, update the matching `href` in `index.html`.
+
 ## Outstanding TODOs
 
-Search the HTML for `TODO` — each marks something deliberately left blank rather
-than guessed:
+Search the HTML for `TODO` and `NOTE` — each marks something deliberately left blank
+or flagged rather than guessed:
 
-- `people.html` — roles/titles for Ryan Nachman, Jenny Huang, Sean Houghton
-- `people.html` — confirm collaborator affiliations, and that each is happy to be listed
+- `people.html` — Ryan Nachman is listed as "Computational Engineer"; the Rafii Lab
+  team page lists "Data Control Assistant". Confirm which you want public.
+- `people.html` — Jenny Huang's current employer: LinkedIn says Columbia, Jenny's own
+  site still says Weill Cornell. Worth confirming directly.
+- `people.html` — check each collaborator is happy to be listed, and that the
+  description of the joint work matches how they would describe it.
 - `people.html` — optional PI bio paragraph
 - `contact.html` — building/room in the address block
-- `contact.html` — GEO accessions and GitHub links for published data
+- `contact.html` / `software.html` — GEO accessions for published data
 
 The publication list was compiled from the Weill Cornell VIVO profile and lists
 title/journal/year only. If you want full author lists, they need adding by hand or
 exporting from Google Scholar.
+
+The MDS spatial mapping paper is cited as *Leukemia*, 2026 based on the description on
+the `MDS.Manuscript` repo; VIVO still lists only the 2025 bioRxiv preprint. Worth a
+check that the volume/page details are right if you add full citations later.
 
 ## Deploying to GitHub Pages
 

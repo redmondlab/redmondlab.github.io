@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research &middot; Redmond Lab</title>
-<meta name="description" content="Research themes: computational biology, transcriptomics and epigenomics, artificial intelligence, and vascular-immune interactions in health and disease.">
+<meta name="description" content="Research themes: computational biology, transcriptomics and epigenomics, machine learning for spatial transcriptomics and imaging, and vascular-immune interactions in health and disease.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,6 +15,7 @@
     <nav class="site">
       <a href="index.html">Home</a>
       <a href="research.html" aria-current="page">Research</a>
+      <a href="software.html">Software</a>
       <a href="publications.html">Publications</a>
       <a href="people.html">People</a>
       <a href="contact.html">Contact</a>
@@ -57,6 +58,7 @@
         <ul class="pubs">
           <li>Integrative multiplatform molecular profiling of benign prostatic hyperplasia identifies distinct subtypes. <span class="venue">Nature Communications, 2020</span></li>
           <li>Systems biology analysis of temporal dynamics that govern endothelial response to cyclic stretch. <span class="venue">Biomolecules, 2022</span></li>
+          <li>Clusters of long COVID among patients hospitalized for COVID-19 in New York City. <span class="venue">BMC Public Health, 2024</span></li>
           <li>Exploring tumor clonal evolution in bone marrow of patients with diffuse large B-cell lymphoma by deep IGH sequencing. <span class="venue">Blood Cancer Journal, 2019</span></li>
           <li>Single-cell TCRseq: paired recovery of entire T-cell alpha and beta chain transcripts from single-cell RNAseq. <span class="venue">Genome Medicine, 2016</span></li>
           <li>Deep sequencing reveals clonal evolution patterns and mutation events associated with relapse in B-cell lymphomas. <span class="venue">Genome Biology, 2014</span></li>
@@ -93,30 +95,33 @@
       </div>
     </div>
 
-    <div class="theme" id="artificial-intelligence">
-      <h2>Artificial intelligence</h2>
+    <div class="theme" id="machine-learning">
+      <h2>Machine learning for spatial transcriptomics and imaging</h2>
       <div class="body">
         <p>
-          We apply machine learning and representation learning to cellular state:
-          predicting identity, fate and perturbation response from high-dimensional
-          measurements, and learning embeddings that make heterogeneous datasets
-          comparable.
+          Dissociated single-cell data tells you which cells are present but throws away
+          where they were. Spatial transcriptomics and tissue imaging keep that context,
+          at the cost of far harder analysis: segmentation, registration, sparse
+          per-spot signal and measurements that only mean something relative to their
+          neighbourhood.
+        </p>
+        <p>
+          We build machine learning methods for that setting &mdash; mapping cell state
+          onto tissue architecture, detecting and quantifying vascular structure directly
+          from images, and connecting spatial readouts back to the dissociated single-cell
+          and epigenomic atlases that describe the same tissue.
         </p>
         <p>
           Our position on models is deliberately unromantic. A model that produces a
           beautiful embedding but no experiment worth running has not helped. We treat
-          machine learning primarily as a hypothesis generator, and hold its outputs to
-          the same standard of experimental validation as anything else in the lab.
+          machine learning as a hypothesis generator, and hold its outputs to the same
+          standard of validation as anything else in the lab.
         </p>
-        <!-- NOTE: this is the theme with the least published output so far - the papers
-             below are the genuinely ML/unsupervised-learning-driven ones. Add or swap
-             as the newer work appears. -->
+        <!-- NOTE: newest theme, so the thinnest paper list. Add in-prep work as it lands. -->
         <p class="papers-label">Selected papers</p>
         <ul class="pubs">
-          <li>Single-cell spatial mapping reveals dynamic bone marrow microarchitectural alterations and enhances clinical diagnostics in MDS. <span class="venue">bioRxiv, 2025 (preprint)</span></li>
-          <li>Clusters of long COVID among patients hospitalized for COVID-19 in New York City. <span class="venue">BMC Public Health, 2024</span></li>
-          <li>Integrative multiplatform molecular profiling of benign prostatic hyperplasia identifies distinct subtypes. <span class="venue">Nature Communications, 2020</span></li>
-          <li>Association of T-cell receptor repertoire use with response to combined trastuzumab-lapatinib treatment of HER2-positive breast cancer. <span class="venue">JAMA Oncology, 2018</span></li>
+          <li>Single-cell spatial mapping reveals dynamic bone marrow microarchitectural alterations and enhances clinical diagnostics in MDS. <span class="venue">Leukemia, 2026</span> &middot; <a href="software.html">MDS-MAPS pipeline</a></li>
+          <li>Single-cell TCRseq: paired recovery of entire T-cell alpha and beta chain transcripts from single-cell RNAseq. <span class="venue">Genome Medicine, 2016</span> &middot; <a href="software.html">scTCRseq</a></li>
         </ul>
       </div>
     </div>
@@ -158,11 +163,40 @@
   <div class="wrap prose">
     <p class="eyebrow">Approach</p>
     <p>
-      The lab sits between computation and biology, and tries to be genuinely accountable
-      to both. Computational predictions are taken seriously enough to test, and
-      experimental results are taken seriously enough to overturn a model. Most of our
-      work is collaborative, carried out with experimental groups whose systems put real
-      pressure on our analyses.
+      We hunt transcription factors. The lab's central bet is that organ-specific
+      endothelial identity &mdash; what makes a liver sinusoid different from a brain
+      capillary or a kidney glomerular vessel &mdash; is written by a tractable number of
+      transcription factors, and that finding them is the route to controlling vascular
+      identity rather than merely cataloguing it.
+    </p>
+    <p>
+      So we build cross-organ atlases of endothelial transcription factor expression,
+      score candidates by how tightly restricted they are to a single vascular bed, and
+      cross-check the strongest against chromatin accessibility to separate factors that
+      are genuinely driving a programme from those merely riding along with it. The
+      shortlist then gets tested: overexpressed in human endothelial cells to ask whether
+      a factor is sufficient to push a generic vessel toward an organ-specific one. That
+      is a reprogramming question, and we treat it as one.
+    </p>
+    <p>
+      In parallel we work the vascular&ndash;immune interface. Endothelial cells decide
+      which immune cells are recruited and licensed, and the vessel a macrophage sits on
+      shapes what that macrophage becomes. We map these interactions across organs and
+      through ageing, where the dialogue turns inflammatory and the endothelium shifts
+      from maintaining tissue to damaging it.
+    </p>
+    <p>
+      Underneath both is method development. We are machine learning practitioners first
+      &mdash; from one of the earliest pipelines for recovering paired full-length TCR
+      sequences from single-cell data, through to deep-learning models that read disease
+      state directly from multiplex tissue images more accurately than the clinical
+      standard. We write the tools we need and release them.
+    </p>
+    <p>
+      None of it works in isolation. Our closest collaborations are with experimental
+      groups whose systems put real pressure on the analysis &mdash; where a prediction
+      that survives contact with a mouse, an organoid or a patient cohort is worth more
+      than one that only survives cross-validation.
     </p>
     <div class="btn-row">
       <a class="btn" href="publications.html">Publications</a>
