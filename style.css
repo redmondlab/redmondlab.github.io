@@ -105,6 +105,7 @@ nav.site a[aria-current="page"] {
   letter-spacing: .09em;
   font-size: .74rem;
   font-weight: 650;
+  line-height: 1.55;
   color: var(--accent);
   margin: 0 0 14px;
 }
