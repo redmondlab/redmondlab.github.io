@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching | Free R, Bulk RNA-seq and scRNA-seq Video Courses</title>
+<meta name="description" content="Two free video courses from the Redmond Lab: Introduction to R, bulk RNAseq analysis and GEO, and R for scRNAseq. Recordings, scripts and data files, open to anyone.">
+<meta name="author" content="David Redmond">
+<link rel="canonical" href="https://redmondlab.org/teaching.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Redmond Lab">
+<meta property="og:title" content="Teaching | Free R, Bulk RNA-seq and scRNA-seq Video Courses">
+<meta property="og:description" content="Two free video courses from the Redmond Lab: Introduction to R, bulk RNAseq analysis and GEO, and R for scRNAseq. Recordings, scripts and data files, open to anyone.">
+<meta property="og:url" content="https://redmondlab.org/teaching.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://redmondlab.org/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Redmond Lab, Weill Cornell Medicine. David Redmond, PhD, Assistant Professor of Computational Biology.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teaching | Free R, Bulk RNA-seq and scRNA-seq Video Courses">
+<meta name="twitter:description" content="Two free video courses from the Redmond Lab: Introduction to R, bulk RNAseq analysis and GEO, and R for scRNAseq. Recordings, scripts and data files, open to anyone.">
+<meta name="twitter:image" content="https://redmondlab.org/assets/og-card.png">
+<meta name="twitter:image:alt" content="Redmond Lab, Weill Cornell Medicine. David Redmond, PhD, Assistant Professor of Computational Biology.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "Introduction to R, bulk RNAseq analysis and GEO",
+      "description": "A six-lesson video course covering R and RStudio from the beginning, differential expression with edgeR, functional enrichment and GSEA, working with public data from GEO and DEE2, and normalisation and dimensional reduction.",
+      "url": "https://redmondlab.org/teaching.html#bulk-rnaseq",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "teaches": ["R", "RStudio", "Bulk RNA-seq analysis", "edgeR", "Gene set enrichment analysis", "Gene Expression Omnibus"],
+      "provider": {"@type": "Organization", "name": "Redmond Lab", "url": "https://redmondlab.org"},
+      "author": {"@type": "Person", "name": "David Redmond", "url": "https://orcid.org/0000-0002-0983-8606"}
+    },
+    {
+      "@type": "Course",
+      "name": "R for scRNAseq",
+      "description": "A four-lesson video course on single-cell RNA-seq analysis in R, with recordings, the scripts used in each lesson and the data files needed to follow along.",
+      "url": "https://redmondlab.org/teaching.html#scrnaseq",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "teaches": ["R", "Single-cell RNA-seq analysis"],
+      "provider": {"@type": "Organization", "name": "Redmond Lab", "url": "https://redmondlab.org"},
+      "author": {"@type": "Person", "name": "David Redmond", "url": "https://orcid.org/0000-0002-0983-8606"}
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Redmond <span>Lab</span></a>
+    <nav class="site">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="software.html">Software</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html" aria-current="page">Teaching</a>
+      <a href="people.html">People</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">Teaching</p>
+    <h1>Video courses</h1>
+    <p class="lead">
+      Two course series on analysing sequencing data in R, taught at Weill Cornell and
+      recorded. The videos, the scripts and the data files are open to anyone. No account
+      and no registration is needed.
+    </p>
+    <p class="detail">
+      Both courses assume no prior programming experience. They start with opening RStudio
+      and end with the kind of analysis that goes into a figure. The point is not to
+      demonstrate a pipeline but to make you able to run one yourself and to argue about
+      whether the answer it gives is real.
+    </p>
+    <div class="btn-row">
+      <a class="btn" href="#bulk-rnaseq">Bulk RNA-seq course</a>
+      <a class="btn ghost" href="#scrnaseq">Single-cell course</a>
+    </div>
+  </div>
+</div>
+
+<section id="bulk-rnaseq">
+  <div class="wrap">
+    <p class="eyebrow">Course one</p>
+    <div class="prose">
+      <h2 style="margin-top:0">Introduction to R, bulk RNAseq analysis and GEO</h2>
+      <p>
+        Six lessons taking you from a first session in R and RStudio through a complete
+        differential expression analysis. The course uses edgeR on a human dataset, covers
+        functional enrichment and GSEA, and spends time on the part that is usually
+        skipped: pulling public data down from GEO and DEE2, merging counts from different
+        studies and getting the annotation to line up.
+      </p>
+      <p>
+        Each lesson folder holds the recording along with the scripts and files used in
+        it, so you can follow along rather than watch.
+      </p>
+
+      <ul class="pubs">
+        <li><strong>Lesson 1.</strong> Basics in R and RStudio</li>
+        <li><strong>Lesson 2.</strong> RNAseq overview and edgeR</li>
+        <li><strong>Lesson 3.</strong> edgeR human example and functional enrichment analysis</li>
+        <li><strong>Lesson 4.</strong> Q&amp;A: GSEA, volcano plots and heatmaps</li>
+        <li><strong>Lesson 5.</strong> DEE2, merging counts and annotation</li>
+        <li><strong>Lesson 6.</strong> Within-sample normalisation and dimensional reduction visualisation</li>
+      </ul>
+
+      <div class="btn-row">
+        <a class="btn" href="https://wcm.box.com/s/9ssifz32dn3xtgp0she250y3fz3znmf8">Open the course materials</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="scrnaseq">
+  <div class="wrap">
+    <p class="eyebrow">Course two</p>
+    <div class="prose">
+      <h2 style="margin-top:0">R for scRNAseq</h2>
+      <p>
+        Four lessons on single-cell RNA-seq analysis in R, picking up roughly where the
+        bulk course leaves off. The folder is organised into recordings, the scripts used
+        in each lesson and the data files needed to run them, with a data folder per
+        lesson.
+      </p>
+      <p>
+        Single-cell analysis is where it is easiest to produce a confident-looking result
+        that is an artefact of the processing choices. The course spends time on those
+        choices rather than treating them as defaults to accept.
+      </p>
+      <!-- TODO: add the four lesson titles here once confirmed, in the same format as the
+           bulk course above. The Box folder lists the lessons only as data folders. -->
+
+      <div class="btn-row">
+        <a class="btn" href="https://wcm.box.com/s/owa2hcq76bpyuwd20aus0ll9faiajm61">Open the course materials</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <p class="eyebrow">Using the material</p>
+    <h2 style="margin-top:0">Notes</h2>
+    <p>
+      Work through the lessons in order. Later ones assume the earlier ones, and the
+      scripts build on each other. You will need a recent version of R and RStudio, both
+      free, and the packages each lesson installs at the start.
+    </p>
+    <p>
+      Anyone is welcome to use these, including for teaching. If you reuse the material in
+      a course of your own, a credit is appreciated. If a video will not play, a script
+      has gone stale against a newer package version, or you are stuck on a step, email
+      <a href="mailto:dar2042@med.cornell.edu">dar2042@med.cornell.edu</a> and we will fix
+      it. Knowing where people get stuck is the most useful feedback we get.
+    </p>
+    <p>
+      For the analysis code behind our papers rather than teaching material, see the
+      <a href="software.html">Software</a> page.
+    </p>
+    <div class="btn-row">
+      <a class="btn ghost" href="contact.html">Contact the lab</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <p>&copy; 2026 Redmond Lab &middot; New York, NY<br>
+       Supported by the Hartman Institute for Therapeutic Organ Regeneration</p>
+    <p><a href="mailto:dar2042@med.cornell.edu">dar2042@med.cornell.edu</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
